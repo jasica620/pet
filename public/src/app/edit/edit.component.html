@@ -1,0 +1,22 @@
+
+<h2>Edit this pet</h2>
+<div *ngIf="pet">
+<form (submit)="editPet(ePet)" #newPet="ngForm">
+  Pet name : <input type="text" [(ngModel)]="pet.name" name="name">
+  <br>
+  Pet type: <input type="text" [(ngModel)]="pet.type" name="type">
+  <br>
+  Description: <input type="text" [(ngModel)]="pet.desc" name="desc">
+  <br>
+  Skills:
+  <br>
+  Skill 1: <input type="text" [(ngModel)]="pet.skill1" name="skill1">
+  <br>
+  Skill 2: <input type="text" [(ngModel)]="pet.skill2" name="skill2">
+  <br>
+  Skill 3: <input type="text" [(ngModel)]="pet.skill3" name="skill3">
+  <br>
+  <input type="submit" value="Edit">
+</form>
+<button [routerLink]="['/pets']">Cancel</button>
+</div>

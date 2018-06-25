@@ -1,0 +1,18 @@
+<router-outlet></router-outlet> 
+  <a [routerLink]="['/pets']">Home</a>
+<div *ngIf="pet">
+<h2>Details about {{pet.name}}</h2>
+<p>Type: {{pet.type}}</p>
+<p>Description: {{pet.desc}}</p>
+<p>Skills: </p>
+<ul>
+  <li>{{pet.skill1}}</li>
+  <li>{{pet.skill2}}</li>
+  <li>{{pet.skill3}}</li>
+</ul>
+<p>Likes: {{pet.likes}}</p>
+<button (click)="like(pet._id)">Like this pet</button>
+<button (click)="adopt(pet._id)">Adpot this pet!</button>
+</div>
+
+
